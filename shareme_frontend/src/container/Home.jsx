@@ -19,13 +19,14 @@ import logo from '../assets/logo.png';
 
 //Pins Container
 import Pins from './Pins';
+import { fetchUser } from '../utils/fetchUser';
 
 const Home = () => {
   //keep track of toggle state
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const [user, setUser] = useState(null);
   //access userinfor from local storage
-  const userInfo = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear(); 
+  const userInfo = fetchUser();
 
   //userefhook
   const scrollRef = useRef(null); 
