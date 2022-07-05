@@ -38,7 +38,6 @@ const Home = () => {
 
     client.fetch(query)
       .then((data)=>{
-        console.log(data);
         setUser(data[0])
         
     }).catch((err)=> console.log(err.message))

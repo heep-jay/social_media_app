@@ -6,15 +6,9 @@ import { IoIosArrowForward } from 'react-icons/io';
 //logo import
 import logo from "../assets/logo.png";
 
+import { categories } from '../utils/data';
 //mock categories
-const categories = [
-  {name: "Animals"},
-  {name: "Wallpapers"},
-  {name: "Photography"},
-  {name: "Anime"},
-  {name: "Gaming"},
-  {name: "Others"},
-]
+
 
 //Styles for active state
 const isNotActiveStyle = "flex items-center px-5 gap-3  text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize";
@@ -58,10 +52,11 @@ const Sidebar = ({user, closeToggle }) => {
             onClick={handleCloseSidebar}
             key={category.name}
           >
-            {/* <img src={category.image} className="w-8 h-8 rounded-full shadow-sm" /> */}
+            <img src={category.image} className="w-8 h-8 rounded-full shadow-sm" />
             {category.name}
           </NavLink>
         ))}
+        
       </div>
 
       </div>
